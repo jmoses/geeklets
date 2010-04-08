@@ -64,7 +64,12 @@ else
   })
   
   # authorize in browser
-  %x(open #{oauth.request_token.authorize_url})
+  `open #{oauth.request_token.authorize_url}`
+  
+  print "Enter your pin: "
+  pin = gets
+  config.update({'pin' => pin.strip})
+  puts "OK!"
 end
 
 if twitter
