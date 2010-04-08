@@ -1,0 +1,26 @@
+These are the script that back some geeklets that I use with Geektool.
+
+== weather_icon
+
+Grab the current weather icon from Yahoo and save it to a file in the temp directory.
+
+Prints the current temperature to STDOUT, so you can use this as the temp source, and it will
+update the image for you at the same time.  No cron job needed.
+
+== twitter_timeline
+
+Prints the last 10 tweets in your timeline.
+
+You'll need to jack with OAUTH to make this work.
+
+Create a $HOME/.twitter file, and put this in it:
+
+    ---
+    token: 1RYvhrmfRNWMxAQ8ViI1Bg
+    secret: Q5FvdrkkX6HWfpffg4nc6cvIBFEmR6BPWaOY3ODY
+    
+Then run the script in a console.  Enter your pin, and then you're set.
+
+== last.fm-parser
+
+Pulls the last 10 recently played tracks from a last.fm account, and formats them nicely.
