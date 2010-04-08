@@ -12,3 +12,9 @@ style = icon.attributes['style']
 if style =~ /url\('(.*?)'\)/
   File.open('/tmp/weather.png', 'w') {|out| open($1) {|f| out << f.read } }
 end
+
+temp = doc.at('div#yw-forecast #yw-temp')
+
+if temp
+  puts temp.inner_text
+end
