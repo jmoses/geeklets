@@ -73,7 +73,7 @@ else
 end
 
 if twitter
-  twitter.friends_timeline(:count => 10).each do |tweet|
+  twitter.home_timeline(:count => 10).each do |tweet|
     printf("%s - %s: %s\n", Time.parse(tweet.created_at).strftime("%H:%M"), tweet.user.name, tweet.text)
   end
 end
